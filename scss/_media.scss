@@ -1,0 +1,135 @@
+// tablets and smaller
+@media(max-width:800px) {
+    #header-home {
+        height: 30rem;
+        .header-content {
+            padding-top: 5rem;
+        }
+    }
+    #about-d .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+//smart phones
+@media(max-width:500px) {
+    #main-nav {
+        flex-direction: column;
+        align-items: center;
+        li {
+            padding: 1rem;
+        }
+    }
+    #header {
+        &-home {
+            height: 30rem;
+            .header-content {
+                text-align: center;
+                padding-top: 2%;
+                h1 {
+                    font-size: 2rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+        &-inner {
+            height: 20rem;
+        }
+    }
+    #home {
+        &-a {
+            .specials {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        &-b {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                div {
+                    &:first-child,
+                    &:last-child {
+                        background: $lighcolor;
+                    }
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        background: $mediumcolor;
+                    }
+                }
+            }
+        }
+        &-c {
+            .process {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+    #about {
+        &-a {
+            .about-info {
+                grid-template-areas: 'bioimage' 'bio' 'aw1' 'aw2' 'aw3';
+            }
+            //grid area
+        }
+        &-c {
+            .about-logos {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1.5rem;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &-d {
+            .testimonials {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+    #work {
+        &-a {
+            .items {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+    #contact {
+        &-a {
+            .text-fields {
+                grid-template-areas: 'name' 'email' 'phone' 'subject' 'message';
+                grid-gap: 2rem;
+                margin-top: 2rem;
+                //grid areas
+                .text-input {
+                    margin-bottom: .5rem;
+                }
+            }
+            .lead {
+                padding-bottom: 1.5rem;
+            }
+        }
+        &-b {
+            .contact-info {
+                grid-gap: 1.5rem;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        &-c {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .main-footer {
+        height: 10rem;
+        .footer-content {
+            flex-direction: column;
+            justify-content: center;
+            height: 8rem;
+            .social .fab {
+                margin-top: 1rem;
+                line-height: 20px;
+            }
+        }
+    }
+}
